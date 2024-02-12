@@ -53,7 +53,12 @@ public class LoginServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 			else {
-				response.sendRedirect("index.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("msg", "Invalid credentials");
+				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+				rd.forward(request, response);
+				
+//				response.sendRedirect("index.jsp");
 			}
 		} catch (ClassNotFoundException e) {
 			logger.error(e);

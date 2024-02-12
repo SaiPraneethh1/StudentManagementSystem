@@ -45,7 +45,7 @@ public class UserDao extends Dao {
 			logger.debug("Validating user "+username);
 			con.commit();
 			
-			String sql = "select * from user where username = '"+username+"' and password = '"+password+"'";
+			String sql = "select * from user where username = binary '"+username+"' and password = binary '"+password+"'";
 			logger.debug("Executing SQL : "+sql);
 			
 			ResultSet rs = stmt.executeQuery(sql);
