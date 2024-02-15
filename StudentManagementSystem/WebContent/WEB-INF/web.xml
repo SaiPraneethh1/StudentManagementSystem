@@ -19,4 +19,44 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Signout</display-name>
+    <servlet-name>Signout</servlet-name>
+    <servlet-class>com.codegnan.web.Signout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Signout</servlet-name>
+    <url-pattern>/signout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentRegistration</display-name>
+    <servlet-name>StudentRegistration</servlet-name>
+    <servlet-class>com.codegnan.web.StudentRegistration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentRegistration</servlet-name>
+    <url-pattern>/studReg</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStudent</display-name>
+    <servlet-name>UpdateStudent</servlet-name>
+    <servlet-class>com.codegnan.web.UpdateStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStudent</servlet-name>
+    <url-pattern>/updateStudent</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteStudent</display-name>
+    <servlet-name>DeleteStudent</servlet-name>
+    <servlet-class>com.codegnan.web.DeleteStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStudent</servlet-name>
+    <url-pattern>/deleteStu</url-pattern>
+  </servlet-mapping>
 </web-app>

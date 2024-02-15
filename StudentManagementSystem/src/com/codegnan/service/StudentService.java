@@ -57,11 +57,29 @@ public class StudentService {
 			return false;
 		}
 	}
-	public boolean deleteStudentById(int id) throws ClassNotFoundException, SQLException, DatabaseInternalException {
-		logger.debug("Deleting student with id : "+id);
-		StudentDao studentDao = new StudentDao();
-		boolean res = studentDao.delete(id);
+//	public boolean deleteStudentById(int id) throws ClassNotFoundException, SQLException, DatabaseInternalException {
+//		logger.debug("Deleting student with id : "+id);
+//		StudentDao studentDao = new StudentDao();
+//		boolean res = studentDao.delete(id);
+//		logger.debug("student deleted successfully with the id : "+id);
+//		return res;
+//	}
+	public boolean deleteStudent(int id) throws DatabaseInternalException, SQLException, ClassNotFoundException {
+		logger.debug("Deleting  the stduent with id :"+id);
+		StudentDao studentDao=new StudentDao();
+		boolean result = studentDao.delete(id);
 		logger.debug("student deleted successfully with the id : "+id);
-		return res;
+	
+		if(studentDao.delete(id)) {
+			
+			studentDao.commit();
+			logger.debug("student deleted sucessfully"+id);
+			return true;
+		}
+		else {
+			studentDao.rollback();
+			logger.debug("can not delete student"+id);
+			return false;
+		}
 	}
 }
