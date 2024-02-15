@@ -41,7 +41,7 @@ if(session != null && session.getAttribute("username")!=null ){
 				<td><%= student.getId() %></td>
 				<td><%= student.getName() %></td>
 				<td><%= student.getEmail() %></td>
-				<td><a href="editStudent.jsp?id=<%=student.getId()%>">Edit</a> | <a href="#">Delete</a></td>
+				<td><a href="editStudent.jsp?id=<%=student.getId()%>">Edit</a> | <a href="deleteStu?id=<%=student.getId()%>">delete</a></td>
 				
 			</tr>
 			<%

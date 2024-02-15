@@ -67,7 +67,6 @@ public class StudentService {
 	public boolean deleteStudent(int id) throws DatabaseInternalException, SQLException, ClassNotFoundException {
 		logger.debug("Deleting  the stduent with id :"+id);
 		StudentDao studentDao=new StudentDao();
-		boolean result = studentDao.delete(id);
 		logger.debug("student deleted successfully with the id : "+id);
 	
 		if(studentDao.delete(id)) {
