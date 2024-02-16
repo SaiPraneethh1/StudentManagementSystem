@@ -21,16 +21,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Signout</display-name>
-    <servlet-name>Signout</servlet-name>
-    <servlet-class>com.codegnan.web.Signout</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Signout</servlet-name>
-    <url-pattern>/signout</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>StudentRegistration</display-name>
     <servlet-name>StudentRegistration</servlet-name>
     <servlet-class>com.codegnan.web.StudentRegistration</servlet-class>
@@ -58,5 +48,15 @@
   <servlet-mapping>
     <servlet-name>DeleteStudent</servlet-name>
     <url-pattern>/deleteStu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Signout</display-name>
+    <servlet-name>Signout</servlet-name>
+    <servlet-class>com.codegnan.web.Signout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Signout</servlet-name>
+    <url-pattern>/Signout</url-pattern>
   </servlet-mapping>
 </web-app>

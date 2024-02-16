@@ -51,7 +51,7 @@ if(session != null && session.getAttribute("username")!=null ){
 		
 	</table>
 	<br><br>
-	<a href="signout">Signout</a>
+	<a href="Signout">Signout</a>
 </body>
 </html>
 
